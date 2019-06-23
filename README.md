@@ -10,9 +10,9 @@ dimension and then produces sum-aggregates for clicks and impressions on the sel
 
 ### Requirements 
 
-– This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-– Papaparse : to fetch the data and directly convert them in a json format, this project is using papaparse. To install it: https://www.npmjs.com/package/papaparse
-– React-select: the typeahead is made with the npm package called react-select. To know more about it and to install it:  https://www.npmjs.com/package/react-select
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
+Papaparse : to fetch the data and directly convert them in a json format, this project is using papaparse. To install it: https://www.npmjs.com/package/papaparse<br>
+React-select: the typeahead is made with the npm package called react-select. To know more about it and to install it:  https://www.npmjs.com/package/react-select
 
 ## Available Scripts
 
