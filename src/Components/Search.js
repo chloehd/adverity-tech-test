@@ -50,6 +50,7 @@ class Search extends Component {
 
     const { selectedOption, clicks, impressions } = this.state;
 
+    // create two labels to search by channel
     const customOptions = [
       { campaign: 'Search', channel: 'searchAll', 
       clicks: this.state.clicks, impressions: this.state.impressions },
