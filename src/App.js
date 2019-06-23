@@ -24,6 +24,7 @@ const App = () => {
       <header className="App-header">
         <h1>Adverity</h1>
       </header>
+      <p>Choose channel or campaign:</p>
       <Search dataList={dataList} />
     </div>
   );
