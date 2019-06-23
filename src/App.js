@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'
+import Papa from 'papaparse';
+import Search from './Components/Search';
 
-function App() {
+
+
+const App = () => {
+  const [dataList, setData] = useState([]);
+
+  // transform the csv doc into a json one
+  Papa.parse('https://www.mocky.io/v2/5cd93aeb300000b721c014b0', {
+      download: true,
+      header: true,
+      delimiter: ",",
+      complete: function(results, file) {
+        setData(results.data);
+      },
+    },)
+   
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search dataList={dataList} />
     </div>
   );
 }
