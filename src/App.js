@@ -21,6 +21,9 @@ const App = () => {
 
   return (
     <div className="App">
+      <header className="App-header">
+        <h1>Adverity</h1>
+      </header>
       <Search dataList={dataList} />
     </div>
   );

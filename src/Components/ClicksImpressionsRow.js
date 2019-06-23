@@ -8,8 +8,19 @@ class ClicksImpressionsRow extends Component {
 
     return ( 
       <div className="clicksImpressions">
-        <p>Clicks: {clicks}</p>
-        <p>Impressions: {impressions}</p>
+        <p>Clicks:</p>
+        {clicks ? (
+          <p className="clicks">{clicks}</p>
+        ) : (
+          <p className="clicks">0</p>
+        )}
+        <p>Impressions:</p>
+        {impressions ? (
+          <p className="impressions">{impressions}</p>
+        ) : (
+          <p className="impressions">0</p>
+        )}
+        
 
       </div>
      );
