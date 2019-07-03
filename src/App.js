@@ -1,23 +1,11 @@
-import React, { useState } from 'react';
-import './App.css'
-import Papa from 'papaparse';
-import Search from './Components/Search';
-
-
+import React from "react";
+import "./App.css";
+import { Data } from "./Data";
+import Search from "./Components/Search";
+import modifyData from "./ModifyDataForSearch";
 
 const App = () => {
-  const [dataList, setData] = useState([]);
-
-  // transform the csv doc into a json one
-  Papa.parse('https://www.mocky.io/v2/5cd93aeb300000b721c014b0', {
-      download: true,
-      header: true,
-      delimiter: ",",
-      complete: function(results, file) {
-        setData(results.data);
-      },
-    },)
-   
+  const data = Data();
 
   return (
     <div className="App">
@@ -25,9 +13,9 @@ const App = () => {
         <h1>Adverity</h1>
       </header>
       <p>Choose channel or campaign:</p>
-      <Search dataList={dataList} />
+      <Search data={modifyData(data)} />
     </div>
   );
-}
+};
 
 export default App;
